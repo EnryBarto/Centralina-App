@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+</head>
+
+<body>
+    <div class="pagina" id="home">
+        <h1>Centralina ESP32</h1>
+        <img src="img/esp32.png" type="img/png" id="esp">
+        <br>
+        <div id="scelta_dispositivo">
+            <label for="dispositivi_associati">Seleziona un dispositivo:</label>
+            <select id="dispositivi_associati"></select>
+            <br>
+            <i>N.B. Il dispositivo deve già essere associato</i>
+            <br>
+            <button id="pulsante_connetti">CONNETTI!</button>
+        </div>
+        <div id="bt_non_attivo">
+            Il bluetooth deve essere acceso!
+            <button onclick="bluetoothSerial.showBluetoothSettings();">Apri impostazioni</button>
+        </div>
+    </div>
+
+    <div class="pagina" id="dati">
+        <h1>Tempi di Iniezione</h1>
+        <table>
+            <tr>
+                <td class="colonna_sx"></td>
+                <td>Off [ms]</td>
+                <td>On [ms]</td>
+            </tr>
+            <tr>
+                <td class="colonna_sx">1</td>
+                <td><input type="text" id="t0off"></td>
+                <td><input type="text" id="t0on"></td>
+            </tr>
+            <tr>
+                <td class="colonna_sx">2</td>
+                <td><input type="text" id="t1off"></td>
+                <td><input type="text" id="t1on"></td>
+            </tr>
+            <tr>
+                <td class="colonna_sx">3</td>
+                <td><input type="text" id="t2off"></td>
+                <td><input type="text" id="t2on"></td>
+            </tr>
+            <tr>
+                <td class="colonna_sx">4</td>
+                <td><input type="text" id="t3off"></td>
+                <td><input type="text" id="t3on"></td>
+            </tr>
+        </table>
+
+        <button id="invia">Invia Dati</button>
+        <button id="carica">Carica Dati</button>
+        <button id="pulsante_disconnetti">Disconnetti</button>
+    </div>
+
+    <div id="app"><div id="message"></div></div>
+    
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script>
+        app.initialize();
+    </script>
+</body>
+
+</html>

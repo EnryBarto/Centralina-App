@@ -1,0 +1,79 @@
+@font-face {
+    font-family: Roboto;
+    src:url("../font/Roboto-Regular.ttf");
+}
+
+html, body {
+    font-family: Roboto;
+    font-size: 1.1em;
+    margin: 0;
+    background-color: #004643;
+    color: #EFF0F3;
+}
+
+.pagina {
+    padding-top: 10%;
+    width: 100%;
+    text-align: center;
+}
+
+select, button {
+    font-family: Roboto;
+    font-size: 0.7em;
+    margin: 10px auto;
+    width: 88%;
+    height: 40px;
+    border: none;
+    font-weight: bold;
+    color: #004643;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #F9BC60;
+}
+
+select {
+    background-color: #EFF0F3;
+}
+
+select:focus, input[type="text"]:focus {
+    outline: none;
+}
+
+input[type="text"] {
+    font-family: Roboto;
+    font-size: 0.7em;
+    text-align: center;
+    height: 25px;
+    width: 90%;
+}
+
+table {
+    margin: auto;
+    margin-bottom: 50px;
+    width: 88%;
+}
+
+tr>td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.colonna_sx {
+    width: 2%;
+    text-align: left;
+}
+
+td {
+    width: 20%;
+}
+
+#esp {
+    margin: auto;
+    width: 50%;
+}
+
+#bt_non_attivo, #dati {
+    display: none;
+}
